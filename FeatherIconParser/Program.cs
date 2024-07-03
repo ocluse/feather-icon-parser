@@ -9,7 +9,7 @@ if(string.IsNullOrWhiteSpace(path))
     Console.WriteLine("Please enter a path");
     return;
 }
-var files = Directory.GetFiles(path, "*.svg");
+var files = Directory.GetFiles(path.Trim('"'), "*.svg");
 
 Dictionary<string, string> elements = new();
 
